@@ -1025,6 +1025,7 @@ This means you are asking PyTorch to compute the gradient of `s` (which is a sca
   y = (x**2).cos()
   s = y.sum()
   ```
+  
   - `y` is computed as a function of `x` (i.e., `y = cos(x^2)`).
   - **`s` is the sum of `y`**, so `s` depends on `x` but not on `y` as an independent variable.
   - **`y` is not an independent variable**; it is derived from `x`. In this sense, the gradient of `s` with respect to `y` is ill-defined because `y` is not independent of `x`.
@@ -2097,6 +2098,7 @@ Here's what happens:
 3. **`LambdaLR` Scheduler**:
    
    - The `LambdaLR` scheduler takes the list of functions (`lr_lambda`) that determine how the learning rate changes for each group at each epoch.
+   
    - It computes the learning rate for each group as:
      
      ```python
